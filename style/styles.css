@@ -97,10 +97,15 @@ h1 span{
     }
 
     .hero nav ul {
+        flex-direction: column;
         padding: 2rem 0;
         gap: 2rem !important;
         background-color: var(--primaryColor-1000);
         color: #fff;
+    }
+
+    nav li a::after{
+        background-color: #fff;
     }
 
     .hero .nav-btn{
