@@ -1,0 +1,300 @@
+
+:root{
+    --primaryColor-1000:#34296d;
+    --primaryColor-500:#f5f3ff;
+    --mainTextColor:#1c1c1c;
+}
+
+*{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+
+body{
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    color: var(--mainTextColor);
+    direction: rtl;
+}
+
+.app{
+    overflow: hidden;
+}
+
+
+/* reset */
+
+ul{
+    list-style: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+button{
+    border: none;
+    outline: none;
+    background-color:transparent;
+    cursor: pointer;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+/*********** classes ***************/
+
+/* mrgins */
+
+.mr-1-auto{
+    margin: 1rem auto;
+}
+
+.mr-b-2{
+    margin-bottom: 2rem;
+}
+
+/* width */
+
+.fit-content{
+    width: fit-content;
+}
+
+/* display */
+
+.flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.center-between{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.gap-1{
+    gap: 1rem;
+}
+
+
+/* alignment */
+
+.text-center{
+    text-align: center;
+}
+
+/* colors */
+
+.clr-dark-prim{
+    color: var(--primaryColor-1000);
+}
+.bg-dark-prim{
+    background-color: var(--primaryColor-1000);
+}
+
+.clr-light-prim{
+    color: var(--primaryColor-500);
+}
+.bg-light-prim{
+    background-color: var(--primaryColor-500);
+}
+
+
+
+
+/******************************* components **************************/
+
+.container{
+    max-width: 900px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin: auto;
+}
+
+.social{
+    padding: 1.5rem 0;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.call-to-more{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.7rem;
+    font-weight: 700;
+
+    background-color: #fff;
+    color: var(--primaryColor-1000);
+    border: 1px solid #ccc;
+}
+
+.whats-to-more{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 2rem;
+    font-weight: 700;
+
+    
+    background-color: var(--primaryColor-1000);
+    color: #fff;
+    border: 1px solid #ccc;
+}
+
+.section-heading{
+    color: var(--primaryColor-1000);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.section-desc{
+    font-size: 1.5rem;
+    max-width: 500px;
+}
+
+.section-heading-small{
+    color: var(--primaryColor-1000);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.section-desc-small{
+    font-size: 1rem;
+    max-width: 400px;
+}
+
+
+
+/* -------------------- fixed icons ------------------*/
+
+.fixed-icon-trans{
+	position: fixed;
+    left: 60px;
+    bottom: 20%;
+	
+	height: fit-content;
+	width: fit-content;
+
+	padding: 1rem;
+	border-radius: 50%;
+    color: #fff;
+	background: #00aff294;
+	transition: all 1.5s ease-in-out;
+
+	transform:scale(.5,.5);
+
+	animation-name: voice;
+	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
+
+	opacity: .7;
+	z-index: 7;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+    cursor: pointer;
+}
+.fixed-icon{  
+	width: 70px;
+	height: 70px;
+	padding: .5rem;
+
+	border-radius: 50%;
+	background: #00aff2;
+	z-index: 5;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.fixed-icon .fas{
+	animation-name: call;
+	animation-duration: .3s;
+	animation-iteration-count: infinite;
+	font-size: 1.5rem;
+}
+
+/* ------------------ whats ----------------*/  
+
+.fixed-whats{
+	position: fixed;
+	top:50%;
+	left: 0;
+	min-width: 70px;
+	padding: 5px;
+	border-top-right-radius:50%;
+	border-bottom-right-radius:50%;
+	background: transparent;
+	z-index: 2;
+	border: 1px solid #777;
+    cursor: pointer;
+}
+.fixed-whats .fab{ 
+	display: block;
+	text-align: right;
+	font-size: 55px;
+	font-weight: 300;
+	color: #080;
+}
+
+/* ------------------ animation ----------------*/ 
+
+@keyframes voice {
+
+    0% {transform: scale(1.1,1.1);}
+    
+    50% {transform: scale(1.3,1.3);}
+    
+    70%  {transform: scale(1.2,1.2);}
+    
+    100% {transform: scale(1,1);}
+    }
+/************/
+@keyframes call {
+
+0%{transform:rotate(20deg);}
+
+40%{transform:rotate(10deg);}	
+
+60%{transform:rotate(0deg);}	
+
+70%{transform:rotate(0deg);}
+
+80%{transform:rotate(0deg);}
+
+90%{transform:rotate(0deg);}
+
+95%{transform:rotate(0deg);}
+
+100%{transform:rotate(25deg);}
+}
